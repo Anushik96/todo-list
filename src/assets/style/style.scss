@@ -1,0 +1,166 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.todoApp{
+    background: #ffff;
+    border-radius: 5px;
+    padding: 25px;
+    width: 95%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.edit-task-form {
+    margin: 10px;
+    padding: 15px;
+
+    .edit-buttons {
+        margin-top: 10px;
+
+        button {
+            margin-right: 10px;
+        }
+    }
+}
+
+.task-list-container {
+    margin-top: 20px;
+}
+
+.edit-task-form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-container,
+.paper {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-buttons,
+.edit-buttons {
+    margin-top: 10px;
+
+    button {
+        margin-right: 10px;
+    }
+}
+
+.trash-list {
+    list-style: none;
+    padding: 0;
+}
+.task-form-container {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .task-buttons {
+            margin-top: 20px;
+
+            button {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.taskList{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.singleTask{
+    p{
+        span{
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: green;
+            border-radius: 50%;
+            margin-left: 5px;
+            &.Pending{
+                background: rgb(178, 65, 25);
+            }
+            &.Complated {
+                background: rgb(0, 255, 132);
+            }
+            &.Overdue {
+                background: rgb(134, 136, 135);
+            }
+        }
+    }
+}
+.trash-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .trash-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #f8d7da; 
+            border: 1px solid #f5c6cb; 
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+
+            .task-details {
+                flex-grow: 1;
+                margin-right: 10px;
+
+                h6 {
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    margin: 0;
+                    color: #721c24; 
+                }
+            }
+
+            .restore-button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 8px;
+                border-radius: 4px;
+                margin-top: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #218838; 
+                }
+            }
+        }
+    }
+}
